@@ -1,1 +1,0 @@
-# gnuboard-masonry-gallery-skin

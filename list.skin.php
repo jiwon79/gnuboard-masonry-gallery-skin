@@ -110,7 +110,7 @@ add_stylesheet('<link rel="stylesheet" href="'.$board_skin_url.'/style.css">', 0
                     </span>
                 </div>
                 <div class="gall_con">
-                    <div class="gall_img" style="<?php if ($board['bo_gallery_height'] > 0) echo 'height:'.$board['bo_gallery_height'].'px;max-height:'.$board['bo_gallery_height'].'px'; ?>">
+                    <div class="gall_img">
                       <?php if($is_admin == 'super'){?>
                         <a href="<?php echo $list[$i]['href'] ?>">
                       <?php }else{
