@@ -72,7 +72,11 @@ add_stylesheet('<link rel="stylesheet" href="'.$board_skin_url.'/style.css">', 0
     </div>
     <?php } ?>
 
-    <ul id="gall_ul" class="gall_row">
+    <div id="gall_ul" class="gall_row">
+      <div class="gall_li">
+        <div class="gall_sizer">
+        </div>
+      </div>
         <?php for ($i=0; $i<count($list); $i++) {
 
             $classes = array();
@@ -89,7 +93,7 @@ add_stylesheet('<link rel="stylesheet" href="'.$board_skin_url.'/style.css">', 0
 
             $line_height_style = ($board['bo_gallery_height'] > 0) ? 'line-height:'.$board['bo_gallery_height'].'px' : '';
          ?>
-        <li class="<?php echo implode(' ', $classes); ?>">
+        <div class="<?php echo implode(' ', $classes); ?>">
             <div class="gall_box">
                 <div class="gall_chk chk_box">
                     <?php if ($is_checkbox) { ?>
@@ -152,21 +156,17 @@ add_stylesheet('<link rel="stylesheet" href="'.$board_skin_url.'/style.css">', 0
                          </a>
                     </div>
 
-                    <div class="gall_info">
-                        <span class="sound_only">작성자 </span><?php echo $list[$i]['name'] ?>
-                        <span class="gall_date"><span class="sound_only">작성일 </span><i class="fa fa-clock-o" aria-hidden="true"></i> <?php echo $list[$i]['datetime2'] ?></span>
-                        <span class="gall_view"><span class="sound_only">조회 </span><i class="fa fa-eye" aria-hidden="true"></i> <?php echo $list[$i]['wr_hit'] ?></span>
-                    </div>
+
                     <div class="gall_option">
                       <?php if ($is_good) { ?><span class="sound_only">추천</span><strong><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> <?php echo $list[$i]['wr_good'] ?></strong><?php } ?>
                         <?php if ($is_nogood) { ?><span class="sound_only">비추천</span><strong><i class="fa fa-thumbs-o-down" aria-hidden="true"></i> <?php echo $list[$i]['wr_nogood'] ?></strong><?php } ?>
                     </div>
                 </div>
             </div>
-        </li>
+        </div>
         <?php } ?>
         <?php if (count($list) == 0) { echo "<li class=\"empty_list\">게시물이 없습니다.</li>"; } ?>
-    </ul>
+    </div>
 
     <!-- 페이지 -->
     <?php echo $write_pages; ?>
