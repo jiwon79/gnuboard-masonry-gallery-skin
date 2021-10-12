@@ -41,13 +41,13 @@ box-shadow:inset 0 2px 5px rgb(33, 135, 202)}
 #bo_gall .gall_li {}
 #bo_gall .gall_li .gall_chk {position:absolute;top:0;left:0;padding:5px;z-index:1}
 #bo_gall .gall_box {
-  width: 18%;
+  width: 23%;
   margin: 1%;
   position: relative;
 }
 
 #bo_gall .gall_sizer {
-  width: 20%
+  width: 25%
 }
 
 #bo_gall .gall_con {
